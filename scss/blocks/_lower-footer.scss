@@ -1,0 +1,33 @@
+.lower-footer {
+    background-color: $black;
+}
+
+.lower-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-height: 79px;
+    align-items: center;
+}
+
+.lower-footer__list {
+    display: flex;
+}
+
+.lower-footer__item {
+    margin-left: 8px;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: $dark-pink;
+    }
+}
+
+.lower-footer__text {
+    @include font(16px, 19px);
+    color: $whitish;
+}

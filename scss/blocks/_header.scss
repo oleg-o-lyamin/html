@@ -1,0 +1,28 @@
+.header {
+    background-color: $black;
+}
+
+.header__navigation {
+    display: none;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75px;
+}
+
+.header__link {
+    margin: 0 0 0 33px;
+}
+
+.header__logo {
+    margin: 0 41px 0 0;
+}
+
+.header_button {
+    background-color: transparent;
+    border: none;
+}
+
