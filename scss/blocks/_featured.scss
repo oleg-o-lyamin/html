@@ -15,18 +15,38 @@
     @include font(14px, 17px);
     color: $grey;
     margin: 0 0 48px;
+
+    @include tablet {
+        margin: 0 0 73px;
+    }
+
+    @include mobile {
+        margin: 0 0 65px;
+    }
 }
 
 .featured-items__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 0 19px;
+    justify-content: center;
+    margin: 0 0 49px;
+    column-gap: 30px;
+    row-gap: 30px;
+
+    @include tablet {
+        column-gap: 14px;
+        row-gap: 16px;
+        margin: 0 0 33px;
+    }
+
+    @include mobile {
+        row-gap: 17px;
+        margin: 0 0 42px;
+    }
 }
 
 .featured-items__item {
     width: 360px;
-    margin: 0 0 30px;
     background-color: $light-grey;
     position: relative;
 

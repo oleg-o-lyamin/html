@@ -2,10 +2,22 @@
     margin: 0 0 96px;
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
 .registration-info {
     margin: 0 0 0 128px;
+
+    @include tablet {
+        margin: 0 0 0 22px;
+    }
+
+    @include mobile {
+        margin: 40px 0 0;
+    }
 }
 
 .registration-info__heading {
@@ -29,6 +41,11 @@
 
         &::placeholder {
             color: $input-color;
+        }
+
+        @include mobile {
+            width: 100%;
+            box-sizing: border-box;
         }
     }
 

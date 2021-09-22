@@ -7,6 +7,11 @@
     justify-content: space-between;
     min-height: 79px;
     align-items: center;
+
+    @include mobile {
+        flex-direction: column-reverse;
+
+    }
 }
 
 .lower-footer__list {
@@ -25,9 +30,17 @@
     &:hover {
         background-color: $dark-pink;
     }
+
+    @include mobile {
+        margin-top: 43px;
+    }
 }
 
 .lower-footer__text {
     @include font(16px, 19px);
     color: $whitish;
+
+    @include mobile {
+        margin: 40px 0 9px;
+    }
 }
