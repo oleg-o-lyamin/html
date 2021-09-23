@@ -8,12 +8,16 @@
     background-color: white;
     top: 75px;
     right: -48px;
-    display: none;
     height: 764px;
-    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-764px);
+    transition: transform 100ms;
 
     &:hover {
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
     }
 
     @include tablet {
@@ -52,7 +56,9 @@
     min-height: 75px;
 
     &:hover + .header__navigation {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
     }
 }
 

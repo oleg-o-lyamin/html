@@ -95,7 +95,7 @@
     @include font(16px, 19px, 300);
 }
 
-.login-details__heading {
+.registration__login-details-heading {
     @include font(13px, 16px, 300);
     padding: 15px 0 0;
     color: $somewhat-grey;
@@ -108,6 +108,7 @@
     color: white;
     padding: 16px 29px;
     border: none;
+    transition: background-color 0.5s;
 
     &:hover {
         background-color: $darker-pink;

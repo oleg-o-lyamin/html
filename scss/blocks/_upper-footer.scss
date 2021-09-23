@@ -85,6 +85,7 @@
         background-color: $dark-pink;
         @include font(14px, 17px);
         color: white;
+        transition: background-color 0.5s;
 
         &:hover {
             background-color: $darker-pink;

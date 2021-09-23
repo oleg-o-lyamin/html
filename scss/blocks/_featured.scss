@@ -51,16 +51,17 @@
     position: relative;
 
     &:hover .featured-items__item-overlay {
-        display: block;
+        opacity: 1;
     }
 }
 
 .featured-items__item-overlay {
-    display: none;
     width: 360px;
     height: 420px;
     position: absolute;
     background-color: $overlay-color;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .featured-items__item-button {

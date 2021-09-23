@@ -129,6 +129,10 @@ body {
   font-size: 20px;
 }
 
+* {
+  z-index: auto;
+}
+
 .header {
   background-color: #222222;
 }
@@ -139,13 +143,17 @@ body {
   background-color: white;
   top: 75px;
   right: -48px;
-  display: none;
   height: 764px;
-  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-764px);
+  transition: transform 100ms;
 }
 
 .header__navigation:hover {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 @media (max-width: 1600px) {
@@ -189,7 +197,9 @@ body {
 }
 
 .header__button:hover + .header__navigation {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 
 .header__navigation-heading {
@@ -488,15 +498,16 @@ body {
 }
 
 .featured-items__item:hover .featured-items__item-overlay {
-  display: block;
+  opacity: 1;
 }
 
 .featured-items__item-overlay {
-  display: none;
   width: 360px;
   height: 420px;
   position: absolute;
   background-color: #3A3838DB;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .featured-items__item-button {
@@ -553,13 +564,13 @@ body {
   color: #F16D7F;
 }
 
-.features__section {
+.features {
   background-color: #222222;
   margin: 96px 0 0;
 }
 
 @media (max-width: 1600px) {
-  .features__section {
+  .features {
     margin: 65px 0 0;
   }
 }
@@ -736,6 +747,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: white;
+  transition: background-color 0.5s;
 }
 
 .upper-right-footer [type="submit"]:hover {
@@ -776,6 +788,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.5s;
 }
 
 .lower-footer__item:hover {
@@ -920,7 +933,7 @@ body {
   font-style: normal;
 }
 
-.login-details__heading {
+.registration__login-details-heading {
   font-size: 13px;
   line-height: 16px;
   font-weight: 300;
@@ -939,6 +952,7 @@ body {
   color: white;
   padding: 16px 29px;
   border: none;
+  transition: background-color 0.5s;
 }
 
 .registration-form__button:hover {
@@ -1021,6 +1035,7 @@ body {
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
+  transition: background-color 0.5s;
 }
 
 .cart__buttons [type="button"]:hover {
@@ -1091,6 +1106,7 @@ body {
   line-height: 17px;
   font-weight: 300;
   font-style: normal;
+  transition: background-color 0.5s;
 }
 
 .checkout [type="button"]:hover {
@@ -1173,13 +1189,14 @@ body {
   text-transform: uppercase;
   width: 100%;
   margin-bottom: 42px;
+  transition: background-color 0.5s;
 }
 
 .checkout__button:hover {
   background-color: #D15D6F;
 }
 
-.browse-all-products__button {
+.featured-items__browse-all-products-button {
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -1187,14 +1204,15 @@ body {
   color: #F26376;
   border: 1px solid #F26376;
   background: none;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-.browse-all-products__button:hover {
+.featured-items__browse-all-products-button:hover {
   background-color: #D15D6F;
   color: white;
 }
 
-.browse-all-products__wrapper {
+.featured-items__browse-all-products {
   text-align: center;
 }
 
