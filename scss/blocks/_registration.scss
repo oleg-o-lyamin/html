@@ -1,0 +1,116 @@
+.registration__wrapper {
+    margin: 0 0 96px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.registration-info {
+    margin: 0 0 0 128px;
+
+    @include tablet {
+        margin: 0 0 0 22px;
+    }
+
+    @include mobile {
+        margin: 40px 0 0;
+    }
+}
+
+.registration-info__heading {
+    @include font(24px, 29px, 300);
+    text-transform: uppercase;
+    margin: 0 0 22px;
+}
+
+.registration-info__text {
+    @include font(24px, 29px, 300);
+    margin: 0 0 21px;
+}
+
+.registration-form { 
+    [type="text"], [type="password"] {
+        width: 360px;
+        height: 45px;
+        border: 1px solid $input-color;
+        margin: 20px 0 0;
+        padding: 0 0 0 16px;
+
+        &::placeholder {
+            color: $input-color;
+        }
+
+        @include mobile {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    [type="radio"] {
+        margin: 31px 0 0;
+        display: none;
+    
+        &:checked+label:before {
+            background: radial-gradient($input-color, $input-color, $input-color, white, white, white);
+        }
+    }
+}
+
+.registration-form label {
+    @include font(11px, 13px, 300);
+    position: relative;
+    margin: 0 20px 0 27px;
+
+    &:before {
+        content: '';
+        border-radius: 50%;
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        left: -27px;
+        border: 1px solid $input-color;
+    }
+}
+
+.registration-form__gender {
+    margin: 35px 0 35px;
+}
+
+.registration-info__item {
+    @include font(24px, 29px, 300);
+    margin: 0 0 16px 39px;
+    position: relative;
+
+    &:before {
+        content: url(../img/check.svg);
+        position: absolute;
+        left: -39px;
+    }
+}
+
+.registration__fieldset-legend {
+    @include font(16px, 19px, 300);
+}
+
+.registration__login-details-heading {
+    @include font(13px, 16px, 300);
+    padding: 15px 0 0;
+    color: $somewhat-grey;
+}
+
+.registration-form__button {
+    margin-top: 39px;
+    background-color: $dark-pink;
+    @include font(14px, 17px);
+    color: white;
+    padding: 16px 29px;
+    border: none;
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: $darker-pink;
+    }
+}

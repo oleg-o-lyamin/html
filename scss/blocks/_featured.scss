@@ -1,0 +1,107 @@
+.featured-items__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-items__heading {
+    @include font(30px, 36px);
+    text-transform: capitalize;
+    color: $black;
+    margin: 0 0 6px;
+}
+
+.featured-items__text {
+    @include font(14px, 17px);
+    color: $grey;
+    margin: 0 0 48px;
+
+    @include tablet {
+        margin: 0 0 73px;
+    }
+
+    @include mobile {
+        margin: 0 0 65px;
+    }
+}
+
+.featured-items__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 49px;
+    column-gap: 30px;
+    row-gap: 30px;
+
+    @include tablet {
+        column-gap: 14px;
+        row-gap: 16px;
+        margin: 0 0 33px;
+    }
+
+    @include mobile {
+        row-gap: 17px;
+        margin: 0 0 42px;
+    }
+}
+
+.featured-items__item {
+    width: 360px;
+    background-color: $light-grey;
+    position: relative;
+
+    &:hover .featured-items__item-overlay {
+        opacity: 1;
+    }
+}
+
+.featured-items__item-overlay {
+    width: 360px;
+    height: 420px;
+    position: absolute;
+    background-color: $overlay-color;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.featured-items__item-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: 1px solid white;
+    @include font(14px, 17px);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 138px;
+    height: 43px;
+
+    &:hover {
+        background-color: $dark-grey;
+    }
+}
+
+.featured-items__item-image {
+    margin: 0 0 25px;
+}
+
+.featured-items__item-heading {
+    margin: 0 29px 13px 18px;
+    @include font(13px, 16px);
+    text-transform: uppercase;
+}
+
+.featured-items__item-description {
+    margin: 0 29px 18px 18px;
+    @include font(14px, 17px, 300);
+    color: $dark-grey;
+}
+
+.featured-items__item-price {
+    margin: 0 29px 20px 18px;
+    @include font(16px, 19px);
+    color: $dark-pink;
+}
